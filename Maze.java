@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 /**
 * The Maze program implements an application that
@@ -13,7 +14,11 @@ public class Maze {
   * The Main method receives input and checks viability.
   */
   public static void main(String[] args)throws Exception {
-    File file = new File("Maze.txt");
+    Scanner input = new Scanner(System.in);
+    System.out.println("\nWhat is the Maze file? ");
+    String fileName = input.nextLine();
+    
+    File file = new File(fileName);
     
     int lines = 0;
     BufferedReader line = new BufferedReader(new FileReader(file));
